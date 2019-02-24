@@ -4,6 +4,7 @@
 const init = require('./lib/homekit.init.js');
 const homekitController = require('./controller/homekitController.js');
 const install = require('./lib/homekit.install.js');
+const uninstall = require('./lib/homekit.uninstall.js');
 
 module.exports = function (sails) {
   gladys.on('ready', () => {
@@ -12,6 +13,7 @@ module.exports = function (sails) {
 
   return {
     install,
+    uninstall,
     routes: {
       before: {
         'patch /homekit/save': (req, res, next) => sails.hooks.policies.middleware.checktoken(req, res, next),
