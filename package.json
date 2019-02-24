@@ -1,0 +1,19 @@
+{
+  "name": "homebridge-plugin-gladys",
+  "version": "0.1.0",
+  "description": "Homebridge Plugin for Gladys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homebridge",
+    "gladys"
+  ],
+  "author": "Piznel",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "hap-nodejs": "^0.4.48"
+  }
+}
