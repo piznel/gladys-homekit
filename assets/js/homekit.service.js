@@ -13,6 +13,7 @@
     const service = {
       saveConfig,
       getDeviceTypes,
+      translation,
       successNotificationTranslated,
       errorNotificationTranslated,
     };
@@ -25,6 +26,10 @@
 
     function getDeviceTypes() {
       return $http({ method: 'GET', url: '/homekit/device/' });
+    }
+
+    function translation(key) {
+      return $translate(key);
     }
 
     function successNotificationTranslated(key, complement) {

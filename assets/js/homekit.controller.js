@@ -9,9 +9,9 @@
     .module('gladys')
     .controller('homekitCtrl', homekitCtrl);
 
-  homekitCtrl.$inject = ['homekitService', '$translate', '$scope'];
+  homekitCtrl.$inject = ['homekitService', '$scope'];
 
-  function homekitCtrl(homekitService, $translate, $scope) {
+  function homekitCtrl(homekitService, $scope) {
     /* jshint validthis: true */
     const vm = this;
 
@@ -89,27 +89,27 @@
 
     categoryList = {
       light: [
-        { id: 'light', label: $translate('ON_OFF') },
-        { id: 'hue', label: $translate('COLOR') },
-        { id: 'brightness', label: $translate('BRIGHTNESS') },
-        { id: 'saturation', label: $translate('SATURATION') },
+        { id: 'light', label: homekitService.translation('ON_OFF') },
+        { id: 'hue', label: homekitService.translation('COLOR') },
+        { id: 'brightness', label: homekitService.translation('BRIGHTNESS') },
+        { id: 'saturation', label: homekitService.translation('SATURATION') },
       ],
       outlet: [
-        { id: 'outlet', label: $translate('OUTLET') },
-        { id: 'outletInUse', label: $translate('INUSE') },
+        { id: 'outlet', label: homekitService.translation('OUTLET') },
+        { id: 'outletInUse', label: homekitService.translation('INUSE') },
       ],
       'binary-Sensor': [
-        { id: 'binary-Sensor', label: $translate('BINARY_SENSOR') },
-        { id: 'motion-Sensor', label: $translate('MOTION_SENSOR') },
-        { id: 'smoke-Sensor', label: $translate('SMOKE_SENSOR') },
-        { id: 'leak-Sensor', label: $translate('LEAK_SENSOR') },
+        { id: 'binary-Sensor', label: homekitService.translation('BINARY_SENSOR') },
+        { id: 'motion-Sensor', label: homekitService.translation('MOTION_SENSOR') },
+        { id: 'smoke-Sensor', label: homekitService.translation('SMOKE_SENSOR') },
+        { id: 'leak-Sensor', label: homekitService.translation('LEAK_SENSOR') },
       ],
-      switch: [{ id: 'switch', label: $translate('SWITCH') }],
-      'temperature-sensor': [{ id: 'temperature-sensor', label: $translate('TEMPERATURE_SENSOR') }],
-      'humidity-sensor': [{ id: 'humidity-sensor', label: $translate('HUMIDITY_SENSOR') }],
-      'light-sensor': [{ id: 'light-sensor', label: $translate('LIGHT_SENSOR') }],
-      'door-opening-sensor': [{ id: 'door-opening-sensor', label: $translate('DOOR_OPEN_SENSOR') }],
-      'window-opening-sensor': [{ id: 'window-opening-sensor', label: $translate('WINDOW_OPEN_SENSOR') }],
+      switch: [{ id: 'switch', label: homekitService.translation('SWITCH') }],
+      'temperature-sensor': [{ id: 'temperature-sensor', label: homekitService.translation('TEMPERATURE_SENSOR') }],
+      'humidity-sensor': [{ id: 'humidity-sensor', label: homekitService.translation('HUMIDITY_SENSOR') }],
+      'light-sensor': [{ id: 'light-sensor', label: homekitService.translation('LIGHT_SENSOR') }],
+      'door-opening-sensor': [{ id: 'door-opening-sensor', label: homekitService.translation('DOOR_OPEN_SENSOR') }],
+      'window-opening-sensor': [{ id: 'window-opening-sensor', label: homekitService.translation('WINDOW_OPEN_SENSOR') }],
     };
 
     activate();
