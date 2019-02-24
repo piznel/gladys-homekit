@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 /* eslint-disable func-names */
 
-const init = require('./lib/init.js');
+const init = require('./lib/homekit.init.js');
 const homekitController = require('./controller/homekitController.js');
-const install = require('./lib/install.js');
+const install = require('./lib/homekit.install.js');
 
 module.exports = function (sails) {
   gladys.on('ready', () => {

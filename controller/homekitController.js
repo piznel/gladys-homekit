@@ -1,5 +1,5 @@
-const saveConfig = require('../lib/saveConfig.js');
-const shared = require('../lib/shared.js');
+const saveConfig = require('../lib/homekit.saveConfig.js');
+const shared = require('../lib/homekit.shared.js');
 
 module.exports = {
 
